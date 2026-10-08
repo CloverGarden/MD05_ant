@@ -1,6 +1,12 @@
 import pandas as pd
 import streamlit as st
 
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(ROOT_DIR))
+
 from config.config import ARTIFACT_PIPELINE
 from src.utils.io import load_artifact
 
